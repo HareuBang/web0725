@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imgs = document.querySelectorAll('img');
+
+      imgs.forEach((img) => {
+        img.addEventListener('contextmenu', (event) => {
+          event.preventDefault()
+        })
+      })
+    })
+  </script>
+</head>
+<body>
+  <img src="https://image-comic.pstatic.net/webtoon/769209/thumbnail/thumbnail_IMAG21_3511dcdd-6e33-4171-8839-598d6d266215.jpg" alt="화산귀환">
+</body>
+</html>

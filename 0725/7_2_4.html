@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.querySelector('input');
+      const button = document.querySelector('button');
+      const pC = document.querySelector('.cm');
+      const c = document.querySelector('.c');
+      const f = document.querySelector('.f');
+
+      button.addEventListener('click', () => {
+        const inch = Number(input.value);
+
+        if(isNaN(inch)){
+          p.textContent = '숫자를 입력해주세요'
+          return
+        }
+
+        const cm = inch * 2.54;
+        pC.textContent = `${cm} cm`;
+        
+        c.textContent = `${inch} C`;
+        
+        f.textContent = `${inch * 33.8} F`;
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="text">inch<br/>
+  <button>계산</button>
+  <p class="cm"></p>
+  <p class="c"></p>
+  <p class="f"></p>
+</body>
+</html>
